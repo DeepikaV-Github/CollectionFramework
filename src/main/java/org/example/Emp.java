@@ -49,11 +49,16 @@ public class Emp {
             System.out.println(Developers);
         }
 
-        public String toString(){
-            return " | "+name;
-        }
+    @Override
+    public String toString() {
+        return "{" +
+                "name='" + name + '\'' +
+                ", Role='" + Role + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 
-        public boolean equals(Object o){
+    public boolean equals(Object o){
             if(this == o) return true;
             if(!(o instanceof Emp)) return false;
             Emp e=(Emp)o;

@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -43,5 +40,33 @@ public class Main {
         set.add(2);
         set.add(1);
         System.out.println(set.size());
+
+        Map<String,Integer> map=new HashMap<>();
+        map.put("Dee",1);
+        map.put("akhil",2);
+        map.put("akak",34);
+        System.out.println(map);
+        for(String key:map.keySet()){
+            System.out.println("Using keySet "+map.get(key));
+        }
+        for(Map.Entry<String,Integer> entry:map.entrySet()){
+            System.out.println("Using entrySet "+ entry.getValue());
+        }
+
+        Map<Integer,Emp> empDetails=new HashMap<>();
+        empDetails.put(111,new Emp("Deeepikaaa","GET",1234));
+        empDetails.put(222,new Emp("karthikaaa","GET",8903));
+        //System.out.println(empDetails);
+
+        empDetails.forEach((s,emp)->{
+            System.out.println(s +" "+emp);
+        });
+
+//        Iterator<Map.Entry<Integer,Emp>> iterator=empDetails.entrySet().iterator();
+//        while(iterator.hasNext()){
+//            Map.Entry<Integer,Emp> entry=iterator.next();
+//            Emp emp=entry.getValue();
+//            System.out.println(emp);
+//        }
     }
 }
