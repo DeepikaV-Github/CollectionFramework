@@ -50,6 +50,7 @@ public class Main {
             System.out.println("Using keySet "+map.get(key));
         }
         for(Map.Entry<String,Integer> entry:map.entrySet()){
+            System.out.println(entry.getKey());
             System.out.println("Using entrySet "+ entry.getValue());
         }
 
@@ -61,6 +62,8 @@ public class Main {
         empDetails.forEach((s,emp)->{
             System.out.println(s +" "+emp);
         });
+
+
 
 //        Iterator<Map.Entry<Integer,Emp>> iterator=empDetails.entrySet().iterator();
 //        while(iterator.hasNext()){
